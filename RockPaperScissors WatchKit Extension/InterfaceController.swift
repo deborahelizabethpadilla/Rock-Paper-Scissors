@@ -12,6 +12,19 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var watchChoice: WKInterfaceImage!
+    
+    @IBOutlet var resultLabel: WKInterfaceLabel!
+    
+    @IBAction func rockChosen() {
+        
+    }
+    @IBAction func paperChosen() {
+        
+    }
+    
+    @IBAction func scissorsChosen() {
+    }
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         

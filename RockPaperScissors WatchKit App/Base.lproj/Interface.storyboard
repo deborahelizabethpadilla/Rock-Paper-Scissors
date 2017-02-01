@@ -16,15 +16,31 @@
                     <items>
                         <group width="1" height="50" alignment="left" id="U46-aV-bkM">
                             <items>
-                                <button width="0.33333333332999998" height="1" alignment="left" backgroundImage="rock" id="GsY-kf-ELA"/>
-                                <button width="0.33333332999999998" height="1" alignment="left" backgroundImage="paper" id="WNd-gv-XMA"/>
-                                <button width="0.33333332999999998" height="1" alignment="left" backgroundImage="scissors" id="Put-hO-4Yc"/>
+                                <button width="0.33333333332999998" height="1" alignment="left" backgroundImage="rock" id="GsY-kf-ELA">
+                                    <connections>
+                                        <action selector="rockChosen" destination="AgC-eL-Hgc" id="66p-zf-N4l"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33333332999999998" height="1" alignment="left" backgroundImage="paper" id="WNd-gv-XMA">
+                                    <connections>
+                                        <action selector="paperChosen" destination="AgC-eL-Hgc" id="2gg-1u-zQ5"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33333332999999998" height="1" alignment="left" backgroundImage="scissors" id="Put-hO-4Yc">
+                                    <connections>
+                                        <action selector="scissorsChosen" destination="AgC-eL-Hgc" id="6KU-mF-od4"/>
+                                    </connections>
+                                </button>
                             </items>
                             <color key="backgroundColor" red="0.20728094629999999" green="0.91832932690000002" blue="0.13299650299999999" alpha="1" colorSpace="calibratedRGB"/>
                         </group>
                         <imageView width="69" height="70" alignment="center" image="paper" id="s78-w9-Xr3"/>
                         <label alignment="center" verticalAlignment="bottom" text="Make A Choice!" id="5CQ-c4-hkS"/>
                     </items>
+                    <connections>
+                        <outlet property="resultLabel" destination="5CQ-c4-hkS" id="dxz-6F-0qh"/>
+                        <outlet property="watchChoice" destination="s78-w9-Xr3" id="nzi-gm-Ww3"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
