@@ -16,12 +16,13 @@ class InterfaceController: WKInterfaceController {
     
     @IBOutlet var resultLabel: WKInterfaceLabel!
     
-    var options = ["Rock, Paper, Scissors"]
+    var options = ["rock.png, paper.png, scissors.png"]
     
     @IBAction func rockChosen() {
-        var randomNumber = arc4random_uniform(3)
+        var randomNumber = Int(arc4random_uniform(3))
         
-        print(randomNumber)
+        watchChoice.setImageNamed(options[randomNumber])
+ 
     }
     
     @IBAction func paperChosen() {
