@@ -18,10 +18,26 @@ class InterfaceController: WKInterfaceController {
     
     var options = ["rock.png, paper.png, scissors.png"]
     
+    var userChoice = 0
+    
     @IBAction func rockChosen() {
         var randomNumber = Int(arc4random_uniform(3))
         
         watchChoice.setImageNamed(options[randomNumber])
+        
+        userChoice = 0
+        
+        if (randomNumber == 0 && userChoice == 1) || (randomNumber == 1 && userChoice == 2) || (randomNumber == 2 && userChoice == 0) {
+            
+            resultLabel.setText("You Win!")
+            
+        } else if (userChoice == 0 && randomNumber == 1) || (userChoice == 1 && randomNumber == 2) || (userChoice == 2 && randomNumber == 0) {
+            
+            print("I Win!")
+            
+        } else {
+            print("It's A Draw!")
+        }
  
     }
     
