@@ -16,9 +16,14 @@ class InterfaceController: WKInterfaceController {
     
     @IBOutlet var resultLabel: WKInterfaceLabel!
     
+    var options = ["Rock, Paper, Scissors"]
+    
     @IBAction func rockChosen() {
+        var randomNumber = arc4random_uniform(3)
         
+        print(randomNumber)
     }
+    
     @IBAction func paperChosen() {
         
     }
