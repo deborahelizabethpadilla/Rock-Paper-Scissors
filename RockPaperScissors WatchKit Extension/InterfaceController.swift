@@ -18,14 +18,12 @@ class InterfaceController: WKInterfaceController {
     
     var options = ["rock.png, paper.png, scissors.png"]
     
-    var userChoice = 0
     
-    @IBAction func rockChosen() {
+    func chooseWinner(userChoice:Int) {
         var randomNumber = Int(arc4random_uniform(3))
         
         watchChoice.setImageNamed(options[randomNumber])
-        
-        userChoice = 0
+       
         
         if (randomNumber == 0 && userChoice == 1) || (randomNumber == 1 && userChoice == 2) || (randomNumber == 2 && userChoice == 0) {
             
@@ -38,14 +36,20 @@ class InterfaceController: WKInterfaceController {
         } else {
             print("It's A Draw!")
         }
+        
+    }
+    
+    @IBAction func rockChosen() {
+        chooseWinner(userChoice: 0)
  
     }
     
     @IBAction func paperChosen() {
-        
+        chooseWinner(userChoice: 1)
     }
     
     @IBAction func scissorsChosen() {
+        chooseWinner(userChoice: 2)
     }
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
