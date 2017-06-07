@@ -20,7 +20,7 @@ class InterfaceController: WKInterfaceController {
     
     
     func chooseWinner(userChoice:Int) {
-        var randomNumber = Int(arc4random_uniform(3))
+        let randomNumber = Int(arc4random_uniform(3))
         
         watchChoice.setImageNamed(options[randomNumber])
        
